@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<line x1="536" y1="400"  x2="836"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="686" y="400" class="smaller">3 m </text>
+<line x1="836" y1="400"  x2="836"  y2="100" style="stroke:black; stroke-width:1"/>
+<text x="836" y="250" class="smaller">3 m </text>
+<line x1="836" y1="100"  x2="736"  y2="0" style="stroke:black; stroke-width:1"/>
+<text x="786" y="50" class="smaller">1.41421 m </text>
+<line x1="736" y1="0"  x2="436"  y2="6.2073e-11" style="stroke:black; stroke-width:1"/>
+<text x="586" y="3.10365e-11" class="smaller">3 m </text>
+<line x1="436" y1="6.2073e-11"  x2="436"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="436" y="200" class="smaller">4 m </text>
+<line x1="436" y1="400"  x2="436"  y2="428" style="stroke:red; stroke-width:1"/>
+<text x="436" y="414" class="smaller">0.28 m </text>
+<line x1="436" y1="428"  x2="418"  y2="428" style="stroke:black; stroke-width:1"/>
+<text x="427" y="428" class="smaller">0.18 m </text>
+<line x1="418" y1="428"  x2="418"  y2="400" style="stroke:red; stroke-width:1"/>
+<text x="418" y="414" class="smaller">0.28 m </text>
+<line x1="418" y1="400"  x2="418"  y2="6.58247e-11" style="stroke:green; stroke-width:1"/>
+<text x="418" y="200" class="smaller">4 m </text>
+<line x1="418" y1="6.58247e-11"  x2="318"  y2="8.65725e-11" style="stroke:green; stroke-width:1"/>
+<text x="368" y="7.61702e-11" class="smaller">1 m </text>
+<line x1="318" y1="8.65725e-11"  x2="318"  y2="400" style="stroke:green; stroke-width:1"/>
+<text x="318" y="200" class="smaller">4 m </text>
+<line x1="318" y1="400"  x2="318"  y2="428" style="stroke:red; stroke-width:1"/>
+<text x="318" y="414" class="smaller">0.28 m </text>
+<line x1="318" y1="428"  x2="300"  y2="428" style="stroke:black; stroke-width:1"/>
+<text x="309" y="428" class="smaller">0.18 m </text>
+<line x1="300" y1="428"  x2="300"  y2="400" style="stroke:red; stroke-width:1"/>
+<text x="300" y="414" class="smaller">0.28 m </text>
+<line x1="300" y1="400"  x2="300"  y2="9.03242e-11" style="stroke:black; stroke-width:1"/>
+<text x="300" y="200" class="smaller">4 m </text>
+<line x1="300" y1="9.03242e-11"  x2="0"  y2="1.52511e-10" style="stroke:black; stroke-width:1"/>
+<text x="150" y="1.21418e-10" class="smaller">3 m </text>
+<line x1="0" y1="1.52511e-10"  x2="1.2426e-10"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="6.21867e-11" y="200" class="smaller">4 m </text>
+<line x1="1.2426e-10" y1="400"  x2="187"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="93.5" y="400" class="smaller">1.87 m </text>
+<line x1="187" y1="400"  x2="187"  y2="428" style="stroke:red; stroke-width:1"/>
+<text x="187" y="414" class="smaller">0.28 m </text>
+<line x1="187" y1="428"  x2="1.329e-10"  y2="428" style="stroke:black; stroke-width:1"/>
+<text x="93.5" y="428" class="smaller">1.87 m </text>
+<line x1="1.329e-10" y1="428"  x2="2.24759e-10"  y2="723.7" style="stroke:black; stroke-width:1"/>
+<text x="1.78829e-10" y="575.85" class="smaller">2.957 m </text>
+<line x1="2.24759e-10" y1="723.7"  x2="177.6"  y2="723.7" style="stroke:black; stroke-width:1"/>
+<text x="88.8" y="723.7" class="smaller">1.776 m </text>
+<line x1="177.6" y1="723.7"  x2="177.6"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="177.6" y="668" class="smaller">1.114 m </text>
+<line x1="177.6" y1="612.3"  x2="71.8"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="124.7" y="612.3" class="smaller">1.058 m </text>
+<line x1="71.8" y1="612.3"  x2="71.8"  y2="592.3" style="stroke:black; stroke-width:1"/>
+<text x="71.8" y="602.3" class="smaller">0.2 m </text>
+<line x1="71.8" y1="592.3"  x2="131.8"  y2="592.3" style="stroke:black; stroke-width:1"/>
+<text x="101.8" y="592.3" class="smaller">0.6 m </text>
+<line x1="131.8" y1="592.3"  x2="131.8"  y2="542.3" style="stroke:black; stroke-width:1"/>
+<text x="131.8" y="567.3" class="smaller">0.5 m </text>
+<line x1="131.8" y1="542.3"  x2="151.8"  y2="542.3" style="stroke:red; stroke-width:1"/>
+<text x="141.8" y="542.3" class="smaller">0.2 m </text>
+<line x1="151.8" y1="542.3"  x2="151.8"  y2="592.3" style="stroke:black; stroke-width:1"/>
+<text x="151.8" y="567.3" class="smaller">0.5 m </text>
+<line x1="151.8" y1="592.3"  x2="271"  y2="592.3" style="stroke:black; stroke-width:1"/>
+<text x="211.4" y="592.3" class="smaller">1.192 m </text>
+<line x1="271" y1="592.3"  x2="271"  y2="612.3" style="stroke:red; stroke-width:1"/>
+<text x="271" y="602.3" class="smaller">0.2 m </text>
+<line x1="271" y1="612.3"  x2="256"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="263.5" y="612.3" class="smaller">0.15 m </text>
+<line x1="256" y1="612.3"  x2="199"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="227.5" y="612.3" class="smaller">0.57 m </text>
+<line x1="199" y1="612.3"  x2="199"  y2="722.3" style="stroke:black; stroke-width:1"/>
+<text x="199" y="667.3" class="smaller">1.1 m </text>
+<line x1="199" y1="722.3"  x2="634.7"  y2="722.3" style="stroke:black; stroke-width:1"/>
+<text x="416.85" y="722.3" class="smaller">4.357 m </text>
+<line x1="634.7" y1="722.3"  x2="634.7"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="634.7" y="667.3" class="smaller">1.1 m </text>
+<line x1="634.7" y1="612.3"  x2="352.5"  y2="612.3" style="stroke:black; stroke-width:1"/>
+<text x="493.6" y="612.3" class="smaller">2.822 m </text>
+<line x1="352.5" y1="612.3"  x2="352.5"  y2="592.3" style="stroke:red; stroke-width:1"/>
+<text x="352.5" y="602.3" class="smaller">0.2 m </text>
+<line x1="352.5" y1="592.3"  x2="952.5"  y2="592.3" style="stroke:black; stroke-width:1"/>
+<text x="652.5" y="592.3" class="smaller">6 m </text>
+<line x1="952.5" y1="592.3"  x2="952.5"  y2="427.3" style="stroke:blue; stroke-width:1"/>
+<text x="952.5" y="509.8" class="smaller">1.65 m </text>
+<line x1="952.5" y1="427.3"  x2="536"  y2="427.3" style="stroke:black; stroke-width:1"/>
+<text x="744.25" y="427.3" class="smaller">4.165 m </text>
+<line x1="536" y1="427.3"  x2="536"  y2="399.3" style="stroke:red; stroke-width:1"/>
+<text x="536" y="413.3" class="smaller">0.28 m </text>
+<text x="656" y="180" class="small">15.5 m² </text>
+<text x="312" y="133.333" class="small">4 m² </text>
+<text x="62.75" y="200" class="small">12 m² </text>
+</svg>
