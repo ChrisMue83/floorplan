@@ -10,7 +10,7 @@ class draw {
   double pi = 3.14159265359;
 
 public:
-  double startx, starty, startangle, minimumx, minimumy;
+  double startx, starty, startangle, minimumx, minimumy, maximumx, maximumy;
   bool showlength;
   vector<double> f1, f2, xcor, ycor;
   vector<string> f3;
@@ -19,7 +19,9 @@ public:
   draw() {
     startx = 0;
     starty = 0;
-    startangle = 0, minimumx = 1E9, minimumy = 1E9;
+    startangle = 0, minimumx = 1E15, minimumy = 1E15, maximumx = -1E15,
+    maximumy = -1E15;
+
     showlength = false;
     xcor.push_back(0);
     ycor.push_back(0);
@@ -27,8 +29,9 @@ public:
 
   void header() {
     cout << "<svg xmlns=\"http://www.w3.org/2000/svg\" "
-            "xmlns:xlink=\"http://www.w3.org/1999/xlink\">"
-         << endl;
+            "xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\""
+         << -100 << " " << -100 << " " << maximumx - minimumx + 300 << " "
+         << maximumy - minimumy + 300 << "\">" << endl;
   }
 
   void ending() { cout << "</svg>" << endl; }
@@ -42,17 +45,16 @@ public:
     double newx, newy;
     newx = startx + cos(startangle + angle) * length;
     newy = starty + sin(startangle + angle) * length;
-   
-           
-   if (show == true) {
+
+    if (show == true) {
       cout << "<line x1=\"" << startx - minimumx << "\" y1=\""
            << starty - minimumy << "\"  x2=\"" << newx - minimumx << "\"  y2=\""
            << newy - minimumy << "\" style=\"stroke:" << color
            << "; stroke-width:" << width << "\"/>" << endl;
 
       if (showlength == true)
-        cout << "<text x=\"" << (startx + newx) / 2 - minimumx << "\" y=\""
-             << (starty + newy) / 2 - minimumy << "\" class=\"smaller\">"
+        cout << "<text x=\"" << (startx + newx) * 0.53 - minimumx << "\" y=\""
+             << (starty + newy) * 0.53 - minimumy << "\" class=\"smaller\">"
              << length / 100. << " m </text>" << endl;
 
       xcor.push_back(newx);
@@ -66,6 +68,10 @@ public:
       minimumx = startx;
     if (minimumy > starty)
       minimumy = starty;
+    if (maximumx < startx)
+      maximumx = startx;
+    if (maximumy < starty)
+      maximumy = starty;
   }
 
   void area(int start, int number) {
@@ -75,8 +81,7 @@ public:
     int bins = 50000;
     dt = 1. / bins;
     double averagex = 0, averagey = 0;
-    
- 
+
     for (int i = start; i < start + number + 1; i++) {
 
       averagex = averagex + xcor[i];
@@ -100,13 +105,22 @@ public:
       }
     }
 
-    averagex = averagex / number;
-    averagey = averagey / number;
-  
+    averagex = averagex / (number + 1);
+    averagey = averagey / (number + 1);
+
+    if (area < 0)
+      area = -area;
+
+    cout << "<polygon points=\"";
+
+    for (int i = start; i < start + number + 1; i++) {
+      cout << xcor[i] - minimumx << "," << ycor[i] - minimumy << " ";
+    }
+    cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
+
     cout << "<text x=\"" << averagex - minimumx << "\" y=\""
-         << averagey - minimumy << "\" class=\"small\">" << -0.5 * area / 10000.
-         << " m² </text>" << endl;
-         
+         << averagey - minimumy << "\" class=\"small\">" << 0.5 * area / 10000.
+         << " m²</text>" << endl;
   }
 
   void reset() {
@@ -176,7 +190,6 @@ int main(int argc, char *argv[]) {
     exit(0);
   drawobj.read(argv[1]);
 
-  drawobj.header();
   for (int i = 0; i < drawobj.f1.size(); i++) {
     if (drawobj.f3[i] == "Restart")
       drawobj.reset();
@@ -187,6 +200,8 @@ int main(int argc, char *argv[]) {
   }
 
   drawobj.reset();
+
+  drawobj.header();
 
   for (int i = 0; i < drawobj.f1.size(); i++) {
     if (drawobj.f3[i] == "Restart")
@@ -212,12 +227,10 @@ int main(int argc, char *argv[]) {
     exit(0);
   }
 
-  for (int i = 0; i < drawobj.beginarea.size(); i++)
-  {
-    drawobj.area(drawobj.beginarea[i]-1,
+  for (int i = 0; i < drawobj.beginarea.size(); i++) {
+    drawobj.area(drawobj.beginarea[i] - 1,
                  drawobj.endarea[i] - drawobj.beginarea[i]);
-  }              
-
+  }
 
   drawobj.ending();
 }
