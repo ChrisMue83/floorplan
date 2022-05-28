@@ -1,4 +1,3 @@
 CC = g++
-
-AreaPlot: floorplan.cc
+floorplan: floorplan.cc
 	$(CC) -o floorplan floorplan.cc
