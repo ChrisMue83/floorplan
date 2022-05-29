@@ -1,7 +1,7 @@
 # definition of landmarks
 # a straight line is going from left to right with 4 different saved points
 
-->Color:red;SavePoint:A0;ShowLength;
+->Color:blank;SavePoint:A0;ShowLength;
 3 0 
 -> SavePoint:A1;
 4.2 0
@@ -12,6 +12,7 @@
 
 ->GoToPoint:A1;
 0.5 90
+#->Color:black
 0.2 0
 
 #----- children room -----
@@ -25,15 +26,13 @@
 4 -90
 1 -90
 ->EndArea
-#s----- END-------------
+#---------- END-------------
 
 
 
-->GoToPoint:A2;Color:green;
+->GoToPoint:A2;Color:blank;
 0.5 90
 0.2 0
-
-
 
 
 # --- living room ----
@@ -53,9 +52,12 @@
 # --- END -----
 
 
-->GoToPoint:A3;Color:red;
+->GoToPoint:A3;Color:blank;
 0.5 90
 0.2 0
+
+
+
 
 #---bed room -----
 ->Color:black;BeginArea
@@ -70,3 +72,53 @@
 1.5 0
 3.2 -90
 ->EndArea
+#----------End----------
+
+
+
+->GoToPoint:A1;Color:blank;
+0.5 -90
+0.2 0
+# ----- Dining Room -------
+
+->Color:black;BeginArea
+2 -90
+4 90
+#8.2 90
+2.1 90
+->Color:blue;Width:4;
+4 0
+->Color:black;Width:1;
+2.1 0
+4 90
+1 90
+->Color:blank
+1 0
+->Color:black
+3.2 0
+->EndArea
+#---------End ------------
+
+
+
+->GoToPoint:A3;Color:blank;
+0.5 -90
+0.2 0
+->BeginArea;Color:black;
+0.8 -90
+4 90
+2 90
+->Color:blue;Width:4
+1 0
+->Color:black;Width:1
+2 0
+1.5 90
+->Color:blue;Width:4
+1 0
+->Color:black;Width:1
+1.5 0
+3 90
+->EndArea 
+
+
+

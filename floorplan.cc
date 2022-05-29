@@ -69,10 +69,10 @@ public:
                << (starty + newy) * 0.53 - minimumy << "\" class=\"smaller\">"
                << length / 100. << " m </text>" << endl;
       }
-      xcor.push_back(newx);
-      ycor.push_back(newy);
-      anglecor.push_back(startangle + angle);
     }
+    xcor.push_back(newx);
+    ycor.push_back(newy);
+    anglecor.push_back(startangle + angle);
 
     startx = newx;
     starty = newy;
