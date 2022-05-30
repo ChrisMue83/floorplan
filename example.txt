@@ -1,7 +1,6 @@
-# definition of landmarks
-# a straight line is going from left to right with 4 different saved points
-
-->Color:blank;SavePoint:A0;ShowLength;
+# Definition of landmarks
+# a straight invisbile line is defined going from left to right with 4 different saved points
+->Color:blank; SavePoint:A0; ShowLength; TextSizeLine:10; TextSizeArea:20; Title:MyAppartment; CompleteArea;
 3 0 
 -> SavePoint:A1;
 4.2 0
@@ -12,11 +11,9 @@
 
 ->GoToPoint:A1;
 0.5 90
-#->Color:black
 0.2 0
-
 #----- children room -----
-->Color:black;BeginArea
+->Color:black;BeginArea; RoomName:Children room;
 2 90
 3 -90
 ->Color:blue;Width:4
@@ -30,13 +27,14 @@
 
 
 
+
+
+
 ->GoToPoint:A2;Color:blank;
 0.5 90
 0.2 0
-
-
-# --- living room ----
-->Color:black;BeginArea
+# --- Living room ----
+->Color:black;BeginArea;RoomName:LivingRoom;
 2 90
 4 -90
 ->Color:blue;Width:4;
@@ -52,15 +50,15 @@
 # --- END -----
 
 
+
+
+
+
 ->GoToPoint:A3;Color:blank;
 0.5 90
 0.2 0
-
-
-
-
-#---bed room -----
-->Color:black;BeginArea
+#---------Bed room -----
+->Color:black;BeginArea;RoomName:Bed Room;
 0.8 90
 4 -90
 5 -90
@@ -76,12 +74,15 @@
 
 
 
+
+
+
 ->GoToPoint:A1;Color:blank;
 0.5 -90
 0.2 0
 # ----- Dining Room -------
 
-->Color:black;BeginArea
+->Color:black;BeginArea; RoomName: Dining Room;
 2 -90
 4 90
 #8.2 90
@@ -101,10 +102,14 @@
 
 
 
+
+
+
 ->GoToPoint:A3;Color:blank;
 0.5 -90
 0.2 0
-->BeginArea;Color:black;
+# ------- Kitchen ---------
+->BeginArea;Color:black; RoomName:Kitchen;
 0.8 -90
 4 90
 2 90
@@ -117,8 +122,58 @@
 1 0
 ->Color:black;Width:1
 1.5 0
-3 90
+3.2 90
 ->EndArea 
+#--------END--------------
 
 
 
+
+
+
+#------- Hallway ---------
+->GoToPoint:A0;Color:blank;RoomName:Hallway;
+0.5 90
+
+->Color:black;BeginArea
+3 -90
+0.2 90
+->Color:blank;
+1 -90
+->Color:black;
+0.2 -90
+3.2 90
+0.2 90
+->Color:blank;
+1 -90
+->Color:black;
+0.2 -90
+2 90
+0.2 90
+->Color:blank;
+1 -90
+->Color;black;
+0.2 -90
+3.2 90
+1 -90
+3.2 -90
+0.2 90
+->Color:blank;
+1 -90
+->Color:black;
+0.2 -90
+2 90
+0.2 90
+->Color:blank;
+1 -90
+->Color:black;
+0.2 -90
+3.2 90
+0.2 90
+->Color:blank;
+1 -90
+->Color:black;
+0.2 -90
+3 90
+->EndArea
+#------- END -------------

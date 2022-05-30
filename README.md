@@ -39,3 +39,8 @@ NoHeader: no svg header is generated
 NoEnding: no svg ending is generated
 BeginArea: begin of the polygon where the area shall be calculated
 EndArea: end of the polygon where the area is calculated
+TextSizeLine: Set Text size of the lines (e.g. TextSizeLine:7;)
+TextSizeArea: Set Text size of the Area (e.g. TextSizeArea:20;)
+Title: Name of the floorplan (e.g. Title: MyAppartment; )
+RoomName: Room name (e.g. RoomName: "kitchen") . Roomname can only be used together with BeginArea and EndArea
+CompleteArea: Calculates the sum of all areas which are calculated with BeginArea and EndArea

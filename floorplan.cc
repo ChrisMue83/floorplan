@@ -9,6 +9,7 @@ using namespace std;
 class draw {
   double pi = 3.14159265359;
   bool area_flag = false;
+  string textsizeline, textsizearea, title, roomname;
 
   string ext_string(string input, string codeword) {
     int i = input.find(codeword);
@@ -17,9 +18,10 @@ class draw {
   }
 
 public:
-  bool showlength, noheader, noending;
+  bool showlength, noheader, noending, completearea_show;
   int beginarea, endarea;
-  double startx, starty, startangle, minimumx, minimumy, maximumx, maximumy;
+  double startx, starty, startangle, minimumx, minimumy, maximumx, maximumy,
+      completearea;
   vector<double> f1, f2, xcor, ycor, anglecor;
   vector<string> f3;
   vector<string> point_name;
@@ -30,12 +32,17 @@ public:
     starty = 0;
     startangle = 0, minimumx = 1E15, minimumy = 1E15, maximumx = -1E15,
     maximumy = -1E15;
-    showlength = false;
+    completearea = 0;
     xcor.push_back(0);
     ycor.push_back(0);
     anglecor.push_back(0);
+    completearea_show = false;
+    showlength = false;
     noheader = false;
     noending = false;
+
+    textsizeline = "8";
+    textsizearea = "20";
   }
 
   void header() {
@@ -43,6 +50,9 @@ public:
             "xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\""
          << -100 << " " << -100 << " " << maximumx - minimumx + 300 << " "
          << maximumy - minimumy + 300 << "\">" << endl;
+
+    cout << "<text x=\"" << -70 << "\" y=\"" << -70 << "\" font-size=\"" << 30
+         << "\">" << title << "</text>" << endl;
   }
 
   void ending() { cout << "</svg>" << endl; }
@@ -65,9 +75,10 @@ public:
              << "; stroke-width:" << width << "\"/>" << endl;
 
         if (showlength == true)
-          cout << "<text x=\"" << (startx + newx) * 0.53 - minimumx << "\" y=\""
-               << (starty + newy) * 0.53 - minimumy << "\" class=\"smaller\">"
-               << length / 100. << " m </text>" << endl;
+          cout << "<text x=\"" << (startx + newx) * 0.5 - minimumx << "\" y=\""
+               << (starty + newy) * 0.5 - minimumy << "\" font-size=\""
+               << textsizeline << "\">" << length / 100. << " m </text>"
+               << endl;
       }
     }
     xcor.push_back(newx);
@@ -122,9 +133,19 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
       area = -area;
     averagex = averagex / (number + 1);
     averagey = averagey / (number + 1);
+
+    if (roomname.size() != 0) {
+      cout << "<text x=\"" << averagex - minimumx << "\" y=\""
+           << averagey - minimumy - stoi(textsizearea) * 1.1
+           << "\" font-size=\"" << stoi(textsizearea) * 1.2 << "\">" << roomname
+           << "</text>" << endl;
+    }
     cout << "<text x=\"" << averagex - minimumx << "\" y=\""
-         << averagey - minimumy << "\" class=\"big\">" << area << " m²</text>"
-         << endl;
+         << averagey - minimumy << "\" font-size=\"" << textsizearea << "\">"
+         << area << " m²</text>" << endl;
+
+    completearea += area;
+    roomname.resize(0);
   }
 
   void reset() {
@@ -135,6 +156,7 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
     xcor.resize(1);
     ycor.resize(1);
     anglecor.resize(1);
+    // completearea_show= false;
   }
 
   void read(string filename) {
@@ -163,6 +185,12 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
     }
   }
 
+  void showcompletearea(void) {
+    if (completearea_show == true)
+      cout << "<text x=\"" << -70 << "\" y=\"" << -40 << "\" font-size=\"" << 25
+           << "\">Area total: " << completearea << " m²</text>" << endl;
+  }
+
   void commands(bool show) {
 
     string color = "black", width = "1";
@@ -180,6 +208,11 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
     commandos.push_back("NoEnding");
     commandos.push_back("BeginArea");
     commandos.push_back("EndArea");
+    commandos.push_back("TextSizeLine");
+    commandos.push_back("TextSizeArea");
+    commandos.push_back("Title");
+    commandos.push_back("RoomName");
+    commandos.push_back("CompleteArea");
 
     for (int j = 0; j < f3.size(); j++) {
       if (f3[j].find("->") != string::npos) {
@@ -227,8 +260,8 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
               istringstream iss(xy_s);
               double a, b;
               iss >> a >> b;
-              startx = a;
-              starty = b;
+              startx = a * 100;
+              starty = b * 100;
 
             } else if (found == "SetAngle") {
               string angle_s = ext_string(f3[j], "SetAngle");
@@ -245,6 +278,16 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
               noheader = true;
             } else if (found == "NoEnding") {
               noending = true;
+            } else if (found == "TextSizeLine") {
+              textsizeline = ext_string(f3[j], "TextSizeLine");
+            } else if (found == "TextSizeArea") {
+              textsizearea = ext_string(f3[j], "TextSizeArea");
+            } else if (found == "Title") {
+              title = ext_string(f3[j], "Title");
+            } else if (found == "RoomName") {
+              roomname = ext_string(f3[j], "RoomName");
+            } else if (found == "CompleteArea") {
+              completearea_show = true;
             }
           }
         }
@@ -253,6 +296,8 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
         drawline(f1[j], f2[j], color, width, show);
       }
     }
+    if (completearea_show == true && show == true)
+      showcompletearea();
   }
 };
 
