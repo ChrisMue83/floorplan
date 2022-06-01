@@ -1,4 +1,6 @@
-# floorplan
+floorplan V 1.0
+
+
 floorplan prints the outline of a defined area from a input textfile.
 
 usage:

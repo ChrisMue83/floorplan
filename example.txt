@@ -1,6 +1,6 @@
 # Definition of landmarks
 # a straight invisbile line is defined going from left to right with 4 different saved points
-->Color:blank; SavePoint:A0; ShowLength; TextSizeLine:10; TextSizeArea:20; Title:MyAppartment; CompleteArea;
+->Color:blank; SavePoint:A0; ShowLength; TextSizeLine:10; TextSizeArea:20; Title:My Appartment; CompleteArea;
 3 0 
 -> SavePoint:A1;
 4.2 0

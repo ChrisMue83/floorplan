@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-100 -100 1740 1340">
+<text x="-70" y="-70" font-size="30">My Appartment</text>
+<line x1="300" y1="540"  x2="100"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="200" y="540" font-size="10">2 m </text>
+<line x1="100" y1="540"  x2="100"  y2="840" style="stroke:black; stroke-width:1"/>
+<text x="100" y="690" font-size="10">3 m </text>
+<line x1="100" y1="840"  x2="200"  y2="940" style="stroke:blue; stroke-width:4"/>
+<text x="150" y="890" font-size="10">1.41421 m </text>
+<line x1="200" y1="940"  x2="500"  y2="940" style="stroke:black; stroke-width:1"/>
+<text x="350" y="940" font-size="10">3 m </text>
+<line x1="500" y1="940"  x2="500"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="500" y="740" font-size="10">4 m </text>
+<line x1="500" y1="540"  x2="400"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="450" y="540" font-size="10">1 m </text>
+<text x="300" y="675.143" font-size="24">Bath room</text>
+<text x="300" y="697.143" font-size="20">15.5 m²</text>
+<line x1="720" y1="540"  x2="520"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="620" y="540" font-size="10">2 m </text>
+<line x1="520" y1="540"  x2="520"  y2="940" style="stroke:black; stroke-width:1"/>
+<text x="520" y="740" font-size="10">4 m </text>
+<line x1="520" y1="940"  x2="620"  y2="1040" style="stroke:blue; stroke-width:4"/>
+<text x="570" y="990" font-size="10">1.41421 m </text>
+<line x1="620" y1="1040"  x2="820"  y2="1040" style="stroke:black; stroke-width:1"/>
+<text x="720" y="1040" font-size="10">2 m </text>
+<line x1="820" y1="1040"  x2="920"  y2="940" style="stroke:blue; stroke-width:4"/>
+<text x="870" y="990" font-size="10">1.41421 m </text>
+<line x1="920" y1="940"  x2="920"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="920" y="740" font-size="10">4 m </text>
+<line x1="920" y1="540"  x2="820"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="870" y="540" font-size="10">1 m </text>
+<text x="732.5" y="743" font-size="24">LivingRoom</text>
+<text x="732.5" y="765" font-size="20">19 m²</text>
+<line x1="1020" y1="540"  x2="940"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="980" y="540" font-size="10">0.8 m </text>
+<line x1="940" y1="540"  x2="940"  y2="940" style="stroke:black; stroke-width:1"/>
+<text x="940" y="740" font-size="10">4 m </text>
+<line x1="940" y1="940"  x2="1440"  y2="940" style="stroke:black; stroke-width:1"/>
+<text x="1190" y="940" font-size="10">5 m </text>
+<line x1="1440" y1="940"  x2="1440"  y2="790" style="stroke:black; stroke-width:1"/>
+<text x="1440" y="865" font-size="10">1.5 m </text>
+<line x1="1440" y1="790"  x2="1440"  y2="690" style="stroke:blue; stroke-width:4"/>
+<text x="1440" y="740" font-size="10">1 m </text>
+<line x1="1440" y1="690"  x2="1440"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="1440" y="615" font-size="10">1.5 m </text>
+<line x1="1440" y1="540"  x2="1120"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="1280" y="540" font-size="10">3.2 m </text>
+<text x="1222.5" y="668" font-size="24">Bed Room</text>
+<text x="1222.5" y="690" font-size="20">20 m²</text>
+<line x1="300" y1="400"  x2="100"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="200" y="400" font-size="10">2 m </text>
+<line x1="100" y1="400"  x2="100"  y2="2.48406e-11" style="stroke:black; stroke-width:1"/>
+<text x="100" y="200" font-size="10">4 m </text>
+<line x1="100" y1="2.48406e-11"  x2="310"  y2="2.48406e-11" style="stroke:black; stroke-width:1"/>
+<text x="205" y="2.48406e-11" font-size="10">2.1 m </text>
+<line x1="310" y1="2.48406e-11"  x2="710"  y2="2.48406e-11" style="stroke:blue; stroke-width:4"/>
+<text x="510" y="2.48406e-11" font-size="10">4 m </text>
+<line x1="710" y1="2.48406e-11"  x2="920"  y2="2.48406e-11" style="stroke:black; stroke-width:1"/>
+<text x="815" y="2.48406e-11" font-size="10">2.1 m </text>
+<line x1="920" y1="2.48406e-11"  x2="920"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="920" y="200" font-size="10">4 m </text>
+<line x1="920" y1="400"  x2="820"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="870" y="400" font-size="10">1 m </text>
+<line x1="720" y1="400"  x2="400"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="560" y="400" font-size="10">3.2 m </text>
+<text x="530" y="218" font-size="24"> Dining Room</text>
+<text x="530" y="240" font-size="20">32.8 m²</text>
+<line x1="1020" y1="400"  x2="940"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="980" y="400" font-size="10">0.8 m </text>
+<line x1="940" y1="400"  x2="940"  y2="0" style="stroke:black; stroke-width:1"/>
+<text x="940" y="200" font-size="10">4 m </text>
+<line x1="940" y1="0"  x2="1140"  y2="0" style="stroke:black; stroke-width:1"/>
+<text x="1040" y="0" font-size="10">2 m </text>
+<line x1="1140" y1="0"  x2="1240"  y2="0" style="stroke:blue; stroke-width:4"/>
+<text x="1190" y="0" font-size="10">1 m </text>
+<line x1="1240" y1="0"  x2="1440"  y2="0" style="stroke:black; stroke-width:1"/>
+<text x="1340" y="0" font-size="10">2 m </text>
+<line x1="1440" y1="0"  x2="1440"  y2="150" style="stroke:black; stroke-width:1"/>
+<text x="1440" y="75" font-size="10">1.5 m </text>
+<line x1="1440" y1="150"  x2="1440"  y2="250" style="stroke:blue; stroke-width:4"/>
+<text x="1440" y="200" font-size="10">1 m </text>
+<line x1="1440" y1="250"  x2="1440"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="1440" y="325" font-size="10">1.5 m </text>
+<line x1="1440" y1="400"  x2="1120"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="1280" y="400" font-size="10">3.2 m </text>
+<text x="1216" y="178" font-size="24">Kitchen</text>
+<text x="1216" y="200" font-size="20">20 m²</text>
+<line x1="1.00635e-11" y1="520"  x2="300"  y2="520" style="stroke:black; stroke-width:1"/>
+<text x="150" y="520" font-size="10">3 m </text>
+<line x1="300" y1="520"  x2="300"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="300" y="530" font-size="10">0.2 m </text>
+<line x1="400" y1="540"  x2="400"  y2="520" style="stroke:black; stroke-width:1"/>
+<text x="400" y="530" font-size="10">0.2 m </text>
+<line x1="400" y1="520"  x2="720"  y2="520" style="stroke:black; stroke-width:1"/>
+<text x="560" y="520" font-size="10">3.2 m </text>
+<line x1="720" y1="520"  x2="720"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="720" y="530" font-size="10">0.2 m </text>
+<line x1="820" y1="540"  x2="820"  y2="520" style="stroke:black; stroke-width:1"/>
+<text x="820" y="530" font-size="10">0.2 m </text>
+<line x1="820" y1="520"  x2="1020"  y2="520" style="stroke:black; stroke-width:1"/>
+<text x="920" y="520" font-size="10">2 m </text>
+<line x1="1020" y1="520"  x2="1020"  y2="540" style="stroke:black; stroke-width:1"/>
+<text x="1020" y="530" font-size="10">0.2 m </text>
+<line x1="1120" y1="540"  x2="1120"  y2="520" style="stroke:black;; stroke-width:1"/>
+<text x="1120" y="530" font-size="10">0.2 m </text>
+<line x1="1120" y1="520"  x2="1440"  y2="520" style="stroke:black;; stroke-width:1"/>
+<text x="1280" y="520" font-size="10">3.2 m </text>
+<line x1="1440" y1="520"  x2="1440"  y2="420" style="stroke:black;; stroke-width:1"/>
+<text x="1440" y="470" font-size="10">1 m </text>
+<line x1="1440" y1="420"  x2="1120"  y2="420" style="stroke:black;; stroke-width:1"/>
+<text x="1280" y="420" font-size="10">3.2 m </text>
+<line x1="1120" y1="420"  x2="1120"  y2="400" style="stroke:black;; stroke-width:1"/>
+<text x="1120" y="410" font-size="10">0.2 m </text>
+<line x1="1020" y1="400"  x2="1020"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="1020" y="410" font-size="10">0.2 m </text>
+<line x1="1020" y1="420"  x2="820"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="920" y="420" font-size="10">2 m </text>
+<line x1="820" y1="420"  x2="820"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="820" y="410" font-size="10">0.2 m </text>
+<line x1="720" y1="400"  x2="720"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="720" y="410" font-size="10">0.2 m </text>
+<line x1="720" y1="420"  x2="400"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="560" y="420" font-size="10">3.2 m </text>
+<line x1="400" y1="420"  x2="400"  y2="400" style="stroke:black; stroke-width:1"/>
+<text x="400" y="410" font-size="10">0.2 m </text>
+<line x1="300" y1="400"  x2="300"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="300" y="410" font-size="10">0.2 m </text>
+<line x1="300" y1="420"  x2="0"  y2="420" style="stroke:black; stroke-width:1"/>
+<text x="150" y="420" font-size="10">3 m </text>
+<text x="728.571" y="448" font-size="24">Hallway</text>
+<text x="728.571" y="470" font-size="20">15.6 m²</text>
+<text x="-70" y="-40" font-size="25">Area total: 122.9 m²</text>
+</svg>
