@@ -31,6 +31,7 @@ Color: sets the color of all following lines (e.g. Color:green; ). The option "C
 Width: sets the width (e.g. width:2; )
 SavePoint: gives the last calculated point a name (e.g. SavePoint:KitchenCorner1; )
 GoToPoint: jumps to the point which was saved by SavePoint (e.g. GoToPoint:KitchenCorner1; )
+JoinPoint: joins the last calculated point with the Point given by SavePoint. (e.g JoinPoint:KitchenCorner1;)
 GoToXY: goes to the X and Y Coordinates given (e.g. GoToXY:0 30)
 SetAngle: Absolute starting angle is defined
 ShowLength: shows all lengths in the diagram

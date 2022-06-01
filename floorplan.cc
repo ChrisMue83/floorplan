@@ -22,6 +22,7 @@ public:
   int beginarea, endarea;
   double startx, starty, startangle, minimumx, minimumy, maximumx, maximumy,
       completearea;
+
   vector<double> f1, f2, xcor, ycor, anglecor;
   vector<string> f3;
   vector<string> point_name;
@@ -81,13 +82,15 @@ public:
                << endl;
       }
     }
-    xcor.push_back(newx);
-    ycor.push_back(newy);
-    anglecor.push_back(startangle + angle);
 
     startx = newx;
     starty = newy;
     startangle = startangle + angle;
+
+    xcor.push_back(newx);
+    ycor.push_back(newy);
+    anglecor.push_back(startangle + angle);
+
     if (minimumx > startx)
       minimumx = startx;
     if (minimumy > starty)
@@ -98,10 +101,29 @@ public:
       maximumy = starty;
   }
 
+  void join(double endx, double endy, string color, string width, bool show) {
+
+    if (color != "blank") {
+      if (show == true) {
+        cout << "<line x1=\"" << startx - minimumx << "\" y1=\""
+             << starty - minimumy << "\"  x2=\"" << endx - minimumx
+             << "\"  y2=\"" << endy - minimumy << "\" style=\"stroke:" << color
+             << "; stroke-width:" << width << "\"/>" << endl;
+
+        if (showlength == true)
+          cout << "<text x=\"" << (startx + endx) * 0.5 - minimumx << "\" y=\""
+               << (starty + endy) * 0.5 - minimumy << "\" font-size=\""
+               << textsizeline << "\">"
+               << pow(pow(endx - startx, 2) + pow(endy - starty, 2), 0.5) / 100.
+               << " m </text>" << endl;
+      }
+    }
+  }
+
   void area(int start, int number) {
     // Greenfunction to calculate the area of a polygon
 
-    double fx, fy, area = 0;
+    double area = 0;
     double averagex = 0, averagey = 0;
 
     for (int i = start; i < start + number + 1; i++) {
@@ -120,13 +142,6 @@ public:
                  (ycor[start] - ycor[i]) *
                      (xcor[i] + 0.5 * (xcor[start] - xcor[i])));
     }
-    /*
-cout << "<polygon points=\"";
-for (int i = start; i < start + number + 1; i++) {
-  cout << xcor[i] - minimumx << "," << ycor[i] - minimumy << " ";
-}
-cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
-*/
 
     area = area * 0.5 / 10000.;
     if (area < 0)
@@ -198,8 +213,14 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
     commandos.push_back("Restart");
     commandos.push_back("Color");
     commandos.push_back("Width");
+    commandos.push_back("TextSizeLine");
+    commandos.push_back("TextSizeArea");
+    commandos.push_back("Title");
+    commandos.push_back("RoomName");
+    commandos.push_back("CompleteArea");
     commandos.push_back("SavePoint");
     commandos.push_back("GoToPoint");
+    commandos.push_back("JoinPoint");
     commandos.push_back("GoToXY");
     commandos.push_back("SetAngle");
     commandos.push_back("ShowLength");
@@ -208,11 +229,6 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
     commandos.push_back("NoEnding");
     commandos.push_back("BeginArea");
     commandos.push_back("EndArea");
-    commandos.push_back("TextSizeLine");
-    commandos.push_back("TextSizeArea");
-    commandos.push_back("Title");
-    commandos.push_back("RoomName");
-    commandos.push_back("CompleteArea");
 
     for (int j = 0; j < f3.size(); j++) {
       if (f3[j].find("->") != string::npos) {
@@ -255,6 +271,20 @@ cout << "\" style=\"fill:rgb(250, 250, 250)\" />" << endl;
                   break;
                 }
               }
+            } else if (found == "JoinPoint") {
+              for (int k = 0; k < point_name.size(); k++) {
+                if (point_name[k] == ext_string(f3[j], "JoinPoint")) {
+                  join(xcor[point_number[k] - 1], ycor[point_number[k] - 1],
+                       color, width, show);
+                  startx = xcor[point_number[k] - 1];
+                  starty = ycor[point_number[k] - 1];
+                  startangle = anglecor[point_number[k] - 1];
+                  xcor.push_back(startx);
+                  ycor.push_back(starty);
+                  break;
+                }
+              }
+
             } else if (found == "GoToXY") {
               string xy_s = ext_string(f3[j], "GoToXY");
               istringstream iss(xy_s);
