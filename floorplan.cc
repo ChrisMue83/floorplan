@@ -83,13 +83,16 @@ public:
       }
     }
 
+    xcor.push_back(newx);
+    ycor.push_back(newy);
+    anglecor.push_back(startangle +  angle);
+    
+    
     startx = newx;
     starty = newy;
     startangle = startangle + angle;
 
-    xcor.push_back(newx);
-    ycor.push_back(newy);
-    anglecor.push_back(startangle + angle);
+    
 
     if (minimumx > startx)
       minimumx = startx;
@@ -268,7 +271,8 @@ public:
                   startangle = anglecor[point_number[k] - 1];
                   xcor.push_back(startx);
                   ycor.push_back(starty);
-                  break;
+                  anglecor.push_back(startangle);
+;                 break;
                 }
               }
             } else if (found == "JoinPoint") {
