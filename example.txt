@@ -13,7 +13,7 @@
 0.5 90
 0.2 0
 #----- Bath room -----
-->Color:black;BeginArea; RoomName:Bath room;
+->Color:black;BeginArea:1; RoomName:Bath room;
 2 90
 3 -90
 ->Color:blue;Width:4
@@ -34,7 +34,7 @@
 0.5 90
 0.2 0
 # --- Living room ----
-->Color:black;BeginArea;RoomName:LivingRoom;
+->Color:black;BeginArea:1;RoomName:LivingRoom;
 2 90
 4 -90
 ->Color:blue;Width:4;
@@ -58,7 +58,7 @@
 0.5 90
 0.2 0
 #---------Bed room -----
-->Color:black;BeginArea;RoomName:Bed Room;
+->Color:black;BeginArea:1;RoomName:Bed Room;
 0.8 90
 4 -90
 5 -90
@@ -82,7 +82,7 @@
 0.2 0
 # ----- Dining Room -------
 
-->Color:black;BeginArea; RoomName: Dining Room;
+->Color:black;BeginArea:1; RoomName: Dining Room;
 2 -90
 4 90
 2.1 90
@@ -109,7 +109,7 @@
 0.2 0
 
 # ------- Kitchen ---------
-->BeginArea;Color:black; RoomName:Kitchen;
+->BeginArea:1;Color:black; RoomName:Kitchen;
 0.8 -90
 4 90
 2 90
@@ -134,7 +134,7 @@
 #------- Hallway ---------
 ->GoToPoint:A0;Color:blank;RoomName:Hallway;
 0.5 90
-->Color:black;BeginArea
+->Color:black;BeginArea:1;
 3 -90
 0.2 90
 ->Color:blank;

@@ -21,7 +21,7 @@ public:
   bool showlength, noheader, noending, completearea_show;
   int beginarea, endarea;
   double startx, starty, startangle, minimumx, minimumy, maximumx, maximumy,
-      completearea;
+      completearea, factor;
 
   vector<double> f1, f2, xcor, ycor, anglecor;
   vector<string> f3;
@@ -33,6 +33,7 @@ public:
     starty = 0;
     startangle = 0, minimumx = 1E15, minimumy = 1E15, maximumx = -1E15,
     maximumy = -1E15;
+    factor = 0;
     completearea = 0;
     xcor.push_back(0);
     ycor.push_back(0);
@@ -120,7 +121,7 @@ public:
     }
   }
 
-  void area(int start, int number) {
+  void area(int start, int number, double factor) {
     // Greenfunction to calculate the area of a polygon
 
     double area = 0;
@@ -143,7 +144,13 @@ public:
                      (xcor[i] + 0.5 * (xcor[start] - xcor[i])));
     }
 
-    area = area * 0.5 / 10000.;
+    if (factor > 0 && factor <= 1)
+      area = area * 0.5 / 10000. * factor;
+    else {
+      cout << "Error: The area factor should be between zero and one" << endl;
+      exit(0);
+    }
+
     if (area < 0)
       area = -area;
     averagex = averagex / (number + 1);
@@ -244,6 +251,7 @@ public:
             } else if (found == "Width") {
               width = ext_string(f3[j], "Width");
             } else if (found == "BeginArea") {
+              factor = stod(ext_string(f3[j], "BeginArea"));
               beginarea = xcor.size();
               area_flag = true;
             } else if (found == "EndArea") {
@@ -255,7 +263,7 @@ public:
               }
 
               if (show == true)
-                area(beginarea - 1, endarea - beginarea);
+                area(beginarea - 1, endarea - beginarea, factor);
             } else if (found == "SavePoint") {
               point_name.push_back(ext_string(f3[j], "SavePoint"));
               point_number.push_back(xcor.size());
